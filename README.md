@@ -1,1 +1,0 @@
-# neuronix-devops
