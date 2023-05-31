@@ -12,4 +12,4 @@
     body_format: json
     body: {}
   vars:
-    artifact_path: "artifactory.bat"
+    artifact_path: "my-artifact.jar"
