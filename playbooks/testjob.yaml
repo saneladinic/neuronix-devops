@@ -2,3 +2,14 @@
   tasks:
     - debug:
         msg: Hello world!
+        
+ - name: Upload artifact to Artifactory
+  uri:
+    url: "{{ ARTIFACTORY_URL }}/api/storage/{{ artifact_path }}"
+    method: PUT
+    user: "{{ ARTIFACTORY_USERNAME }}"
+    password: "{{ ARTIFACTORY_PASSWORD }}"
+    body_format: json
+    body: {}
+  vars:
+    artifact_path: "artifactory.bat"
